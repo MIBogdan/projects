@@ -2,7 +2,6 @@
   "name": "5.3-axios",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "engines": {
     "node": ">= 14.0.0",
     "npm": ">= 6.0.0"

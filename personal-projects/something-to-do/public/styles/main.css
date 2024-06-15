@@ -20,12 +20,9 @@ h1 {
 }
 /* ------------ */
 .container {
-  height: 100%;
-  width: 100%;
   max-width: 570px;
   margin: 0 auto;
   padding: 60px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,7 +113,6 @@ h1 {
   width: 30em;
   margin: 0 2em;
   position: absolute;
-  margin-top: 2em;
   
 }
 
