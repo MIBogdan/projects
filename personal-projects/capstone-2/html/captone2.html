@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section id="top-img">
+        <div class="gradient-background">
+            <div class="top-text">
+               <h2>I'm Marius.</h2> 
+               <p>A future programmer.</p>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <section id="hero">
+        <div class="self-img">
+            <img class="self-img" src="../img/Bogdan Marius-portrait.jpeg" alt="">
+        </div>
+        <div class="hero-text">
+            <h3>Hello.</h3>
+            <p>I'm an ex Diver / Team Leader looking make a change in my career.</p>
+        </div>
+    </section>
+
+    <section id="resume">
+            <h2>SKILLS</h2>
+
+
+        <div class="resume-skill">
+            <img src="../img/play.gif" height="200px">
+            <p>I love computers since I was a kid. I used to play games since I was 4 years old and I always wondered what's the logic behind the creation of all the things involved in making possible the use of a computer. Life had other plans for me though and I had to follow the sport I've been practicing my entire life, diving. Having a family now I want to make a change in my career and become what I've always dreamed, a programmer.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-text">
+            <h2>Get In Touch</h2>
+            <p>I'm very eager to meet new people and learn new skills.</p>
+        </div>
+
+        <div>
+            <button class="contact-btn" href="#">CONTACT ME</button>
+        </div>
+        
+    </section>
+
+    <section id="footer">
+        <div class="footer-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Website</a>
+        </div>
+
+        <div class="footer-credentials">
+            <p>© Bogdan Marius</p>
+        </div>
+
+        <div class="buttons-year">   
+            <div class="buttons-container">
+                    <div class="outline">
+                        <span class="top-key"></span>
+                        <a href="https://www.marius-bogdan.com/">
+                            <button class="return-button">
+                                <div class="return-sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                                <div class="return-text">Return</div>
+                            </button>
+                        </a>
+                        <a href="https://github.com/MIBogdan/projects/tree/main/personal-projects/capstone-2">
+                            <button class="code-button">
+                                <span class="bracket left">&#123;</span>
+                                <span class="code-text">View Code</span>
+                                <span class="bracket right">&#125;</span>
+                            </button>
+                        </a>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </div>
+                <div class="year-container">
+                    <p id="year"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script>
+        let year = new Date().getFullYear();
+        document.getElementById('year').innerHTML = `&copy ${year} Marius Bogdan. All rights reserved.`;
+
+    </script>
+</body>
+</html>
