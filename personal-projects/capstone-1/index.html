@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>My Resume</h1>
+
+    <h3>Bogdan Marius</h3>
+    <img src="./profile-picture/marius-ionita-portrait.jpeg" head="200" width="150" alt="Portrait picture of Bogdan Marius"/>
+    <h2>
+        <a href="./portfolio-project/index.html">Portfolio</a>
+    </h2>
+    <hr/>
+
+    <ul>
+        <li>Summary:</li>
+        <ul>
+            <li>My goals are straight forward:</li>
+            <ol>
+                <li>I find programming exciting and I wish to be very good at it.</li>
+                <li>I'm always interested in what's going on behind the scenes of a website, game, app, etc..</li>
+                <li>I wanted to do this since I was a kid, it's been my dream.</li>
+                <li>I ALWAYS like to finish what I started and I tend to never give up until I do!</li>
+            </ol>
+        </ul>
+    <hr/>    
+        <li>Education:</li><p>
+            <ul><li>I have completed the following:<ol>
+                <li>High scool graduated at "Colegiul Tehnic Petru Rares".</li>
+                <li>Bachelors degree obtained at "Liceul Tehnologic de Metrologie Traian Vuia".<br/>
+                because the high school I've finished went into renovations and afterwards got discontinued.</li>
+                <li>I'm currently in the University at "Universitatea de Informatica Titu Maiorescu".</li>
+                <li>I'm also taking a 1 year course at "LINK Academy" which specializes in "Fullstack Front-end Programming". </li>
+                <li>And I also take another course on Udemy, made by Angela Yu which teaches full stack developing for Front-End Programming.</li>
+            </ol></li></ul>
+    <hr/>    
+        <li>Skills:</li><ol>
+            <li>I'm very enthusiast on every project I start.</li>
+            <li>I always try to give my best on everything I work on.</li>
+            <li>I never leave things unfinished.</li>
+            <li>I love to work with other educated, nice, humble people, giving that I always return the behaviour that's directed towards me.</li>
+        </ol>
+    <hr/>
+    </p>
+        <li>Work experience:</li><p>
+            I had only one job my entire life working in the same company for the past 9 years:<br/>
+            "SOKOL" (becoming "Vertical Limit" in 2020 because the CEO changed).<br/>
+            I've been doing the thing I've always known, diving shows in different attraction parks such as:<br/>
+            Europa Park (Germany), Asterix (France), Walibi Rhone Alpes (France), Djurs Sommerland (Holland),<br/>
+             Metz (France), Chateau Du Beloeil (Belgium), and might be more that I might've forgotten... .<br/>
+             In many of this contracts I've been appointed as team Captain which involves:<br/>
+             taking care of an entire international team, make sure that everybody does their job correctly without falling out of order, aswell as taking care of<br/>
+             the tehnical side of the pool we were diving in such as: heaters temperature, filters, springboards security,<br/>
+             russian swing security, high diving tower security, etc... .
+        </p>
+    </ul>
+    <hr/>
+    <article>
+        <footer>
+            <p><a href="./contact-about/about.html">About Me</a> 
+                <a href="./contact-about/contact.html">Contact</a>
+            </p>
+            </footer>
+    </article>
+
+    <div class="buttons-year">   
+        <div class="buttons-container">
+                <div class="outline">
+                    <span class="top-key"></span>
+                    <a href="https://www.marius-bogdan.com/">
+                        <button class="return-button">
+                            <div class="return-sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            <div class="return-text">Return</div>
+                        </button>
+                    </a>
+                    <a href="https://github.com/MIBogdan/projects/tree/main">
+                        <button class="code-button">
+                            <span class="bracket left">&#123;</span>
+                            <span class="code-text">View Code</span>
+                            <span class="bracket right">&#125;</span>
+                        </button>
+                    </a>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                </div>
+            <div class="year-container">
+                <p id="year"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let year = new Date().getFullYear();
+        document.getElementById('year').innerHTML = `&copy ${year} Marius Bogdan. All rights reserved.`;
+
+    </script>
+</body>
+</html>
