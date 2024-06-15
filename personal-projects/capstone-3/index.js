@@ -1,7 +1,7 @@
-import e from "express";
-import bodyParser from "body-parser";
-import axios from "axios";
-import IP from "ip";
+const e = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+const IP = require('ip');
 
 
 const app = e();
