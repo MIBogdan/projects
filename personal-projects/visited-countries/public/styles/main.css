@@ -1,0 +1,492 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 99%;
+}
+body {
+  background: #21252b;
+
+  color: #d3ddef;
+}
+
+.ag-canvas {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  position: relative;
+  visibility: visible;
+
+  width: 100%;
+  height: 95%;
+  padding: 3rem 1rem;
+  opacity: 1;
+  transition: opacity 0.5s;
+  z-index: -1;
+  margin-top: -90px;
+}
+.ag-canvas_svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin-left: 1rem;
+}
+.ag-canvas_svg path {
+  fill: #383d46;
+  fill-opacity: 1;
+  stroke: #21252b;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+  transition: 0.5s;
+  animation: fillAnimation 2s ease;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .ag-canvas {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    height: auto;
+    padding: 4rem 1rem 1rem;
+  }
+  .ag-canvas_svg {
+    max-height: calc(100% - 6rem);
+    margin-left: 0;
+  }
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 45%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.or {
+  display: inline-block;
+  margin: 0 2.5%;
+  transform: translateY(-320%);
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgba(0, 128, 128, 0.479);
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  display: block;
+  width: 50%;
+  margin: 0 25%;
+}
+
+.total-count {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  position: absolute;
+  padding: 15px;
+  left: 0;
+  bottom: 5em;
+}
+
+#alreadyChosen {
+  color: red;
+}
+
+#message {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.307);
+  width: 25em;
+  text-align: center;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  margin: auto;
+}
+
+.country {
+  padding: 0.5em;
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+#countryList {
+  background-color: white;
+  color: black;
+  padding: 0.6em;
+  margin: 0;
+
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  
+}
+
+.inputText {
+  width: 100%;
+}
+
+.form1 {
+  margin-left: 3em;
+}
+
+.form1, .form2 {
+  width: 43%;
+  display: inline-block;
+  
+  left: 0;
+  right: 0;
+  
+}
+
+.test {
+  width: 99%;
+  left: 0;
+  right: 0;
+}
+
+
+.truncate {
+  color: white;
+  position: absolute;
+  bottom: 12em;
+  width: 15em;
+}
+
+
+.truncateBtn {
+  background-color: rgba(255, 0, 0, 0.307);
+  width: 15em;
+  margin: 0;
+}
+
+.info {
+  position: absolute;
+  bottom: 15em;
+}
+
+
+.buttons-year {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  position: absolute;
+  bottom: 6em;
+  left: 0;
+  right: 0;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128, 0.2);
+    width: 30em;
+    margin: 0 2em;
+    position: absolute;
+    
+}
+
+.buttons-container a {
+    text-decoration: none;
+    
+}
+
+.year-container {
+    position: absolute;
+    text-align: center;
+    margin-top: 5.5em;
+    font-size: large;
+}
+
+
+
+
+
+/* Return home button */
+
+.return-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 7em;
+    height: 3em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    margin-bottom: 0 !important;
+    background-color: #000000; 
+    margin: 0 !important;
+}
+    
+
+.return-sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.return-sign svg {
+    width: 1.4em; 
+}
+
+.return-sign svg path {
+    fill: white; 
+}
+
+.return-text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s; 
+}
+
+
+.return-button:hover {
+    width: 15em;
+    transition-duration: .3s; 
+}
+
+.return-button:hover .return-sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 1.5em; 
+}
+
+
+.return-button:hover .return-text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 0.2em; 
+}
+
+
+.return-button:active {
+    transform: translate(2px, 2px); 
+}
+
+/* Return home button */
+
+
+/* View code button */
+
+
+.code-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    height: 3em;
+    width: 7em;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 0 !important;
+    overflow: hidden; 
+    margin: 0 !important;
+}
+  
+.bracket {
+    font-size: 1.3em;
+    transition: all 0.3s;
+    color: #ffffff;
+    
+}
+
+.left,
+.right {
+    margin-bottom: 0.1em;
+}
+
+.code-text {
+    font-size: 0.8em;
+    width: 0;
+    transform: scale(0);
+    transition: all .3s;
+    white-space: nowrap;
+    color: white; 
+    
+}
+  
+.code-button:hover {
+    width: 15em; 
+}
+  
+.code-button:hover .code-text {
+    transform: scale(1.4);
+    width: 13em; 
+}
+
+/* View code button */
+
+@media (max-width: 1024px) {
+  * {
+      transition: none;
+      animation: none;
+  }
+
+  .ag-canvas {
+    width: auto;
+  }
+  .return-button {
+      width: 16em !important;
+      
+  }
+
+  
+
+  .return-sign {
+      width: 30%;
+      padding-left: 1.5em;
+  }
+
+  .return-text {
+      opacity: 1;
+      width: 70%;
+      padding-right: 0.5em;
+      font-size: 1.8em;
+  }
+
+
+  .code-button {
+      width: 16em !important;
+  }
+
+  .code-text {
+      transform: scale(1.4);
+      width: 8em !important;
+      font-size: 1.2em; 
+  }
+
+  .bracket {
+      font-size: 2em;
+  }
+
+   .form1 {
+    margin-left: 3em;
+  } 
+
+   .form1, .form2 {
+    width: 40%;
+    left: 0;
+    right: 0;
+    
+  } 
+
+  .info {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+   .form1 {
+    margin-left: 4em;
+  }
+
+  .form1, .form2 {
+    width: 35%;
+    left: 0;
+    right: 0;
+    
+  } 
+}
+
+
+@media (max-width: 430px) {
+
+  .form1 {
+    margin-left: 2em;
+  }
+
+  .return-button {
+    width: 10em !important;
+    height: 1em;
+  }
+
+  .buttons-container {
+    width: 23em;
+    
+  }
+
+
+
+  .return-sign {
+      width: 40%;
+      padding-left: 0;
+      padding-right: 0.5em;
+  }
+
+  .return-text {
+      opacity: 1;
+      width: 70%;
+      padding-right: 0.5em;
+      font-size: 0.8em;
+  }
+
+
+  .code-button {
+      width: 10em !important;
+      height: 1em;
+  }
+
+  .code-text {
+      transform: scale(1.4);
+      width: 12em !important;
+      font-size: 0.6em; 
+  }
+
+  .bracket {
+      font-size: 1.5em;
+  }
+
+  .ag-canvas {
+    height: 80%;
+  }
+}
