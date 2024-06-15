@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>I'm Bored</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Let's find something for you to do ✌️</h1>
+
+    <form action="/" id="form" class="form" method="POST">
+      <select name="type" class="form-select">
+        <option value="" data-display="Select">Random type</option>
+        <option value="education">Education</option>
+        <option value="charity">Charity</option>
+        <option value="recreational">Recreational</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="busywork">Busywork</option>
+        <option value="social">Social</option>
+        <option value="diy">DIY</option>
+        <option value="music">Music</option>
+      </select>
+      <select name="participants" class="form-select">
+        <option value="">Any number of people</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <button type="submit" class="form-submit">Go</button>
+    </form>
+    <section id="cards" class="cards">
+      <% if (locals.data) { %>
+      <article class="card-item">
+        <h2 class="card-activity">
+          <%= data.activity %> 
+        </h2>
+        <div class="card-info">
+          <span class="card-type">
+            <%= data.type %> 
+          </span>
+          <span class="card-participants">
+            <%= data.participants %> 
+            <span class="card-number"></span>
+          </span>
+        </div>
+      </article>
+      <% } %>
+
+      <div id="tag-error" class="tag-error">
+        <% if (locals.error) { %>
+        <%= error %>
+        <% } %>
+      </div>
+
+    </section>
+  </div>
+
+
+  <div class="buttons-year">   
+    <div class="buttons-container">
+            <div class="outline">
+                <span class="top-key"></span>
+                <a href="https://www.marius-bogdan.com/">
+                    <button class="return-button">
+                        <div class="return-sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                        <div class="return-text">Return</div>
+                    </button>
+                </a>
+                <a href="https://github.com/MIBogdan/projects/tree/main">
+                    <button class="code-button">
+                        <span class="bracket left">&#123;</span>
+                        <span class="code-text">View Code</span>
+                        <span class="bracket right">&#125;</span>
+                    </button>
+                </a>
+                <span class="bottom-key-1"></span>
+                <span class="bottom-key-2"></span>
+            </div>
+        <div class="year-container">
+            <p id="year"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+  let year = new Date().getFullYear();
+  document.getElementById('year').innerHTML = `&copy ${year} Marius Bogdan. All rights reserved.`;
+</script>
+</body>
+
+</html>
