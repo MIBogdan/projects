@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="This is the ToDoList."
+    />
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/28d582c70e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDoList | How To</title>
+
+    
+  </head>
+  <body>
+    
+    <div class="content vertical">
+      <header>
+        <h1> Todo List</h1>
+        
+      </header>
+
+      <main class="">
+
+        <form class="todo-form" id="todo-form">
+          <div class="todo-form-row">
+            <div class="todo-form-column form-col-left">
+              <label for="form-task-title">Task Title</label>
+              <input
+                type="text"
+                id="form-task-title"
+                placeholder="Task Title"
+                maxlength="100"
+              />
+            </div>
+            <div class="todo-form-column form-col-right">
+              <label for="form-task-duedate">Due-Date</label>
+              <input
+                type="date"
+                id="form-task-duedate"
+                placeholder="Due Date"
+              />
+            </div>
+          </div>
+          <div class="todo-form-row">
+            <div class="todo-form-column form-col-left">
+              <label for="form-task-description">Description</label>
+              <textarea
+                id="form-task-description"
+                placeholder="Description"
+                rows="3"
+                maxlength="500"
+              ></textarea>
+            </div>
+            <div class="todo-form-column form-col-right form-button-position">
+              <button id="form-submit" class="button-add-task">Add Task</button>
+            </div>
+          </div>
+        </form>
+
+        
+        <section class="horizontal cards-view">
+          
+          <div class="task-container horizontal">
+
+          </div>
+
+          <div class="task-container horizontal task-container-done">
+
+          </div>
+
+        </section>
+
+        <div class="buttons-year">   
+          <div class="buttons-container">
+                  <div class="outline">
+                      <span class="top-key"></span>
+                      <a href="https://www.marius-bogdan.com/">
+                          <button class="return-button">
+                              <div class="return-sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                              <div class="return-text">Return</div>
+                          </button>
+                      </a>
+                      <a href="https://github.com/MIBogdan/projects/tree/main">
+                          <button class="code-button">
+                              <span class="bracket left">&#123;</span>
+                              <span class="code-text">View Code</span>
+                              <span class="bracket right">&#125;</span>
+                          </button>
+                      </a>
+                      <span class="bottom-key-1"></span>
+                      <span class="bottom-key-2"></span>
+                  </div>
+              <div class="year-container">
+                  <p id="year"></p>
+              </div>
+          </div>
+      </div>
+
+      </main>
+      
+      
+      </div>
+
+      
+      
+    
+    <script type="module" src="./public/app/app.js"></script>
+
+    
+  </body>
+</html>
