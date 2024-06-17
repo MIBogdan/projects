@@ -1,0 +1,57 @@
+<%- include('partials/header')  %>
+
+    <div id="header_container">
+        <div class="text">
+            <h1>Hello! I'm Marius.</h1>
+            <p class="green">This web application allows users to make blog posts and read them afterwards.</p>
+            <p id="error"><%= error ? error : undefined %></p>
+        </div>
+    </div>
+
+    <div id="main_container">
+        <div id="text_input">
+        <form class="form_container" action="/submit" method="POST">
+            <div class="title_date">
+                <div class="title">
+                    <label for="title"></label>
+                    <input type="text" id="title" name="title" placeholder="Title" maxlength="50">
+                </div>
+                
+            </div>
+            
+            <div class="textarea">
+                <label for="textarea">Blog post</label>
+                <textarea id="textarea" name="textarea" rows="10" cols="50" placeholder="Write your text here... (250 characters maximum)" maxlength="250"></textarea>
+            </div>
+            <input class="button" type="submit" value="Submit">
+        </form>
+        </div>
+
+        
+
+        <div id="output">
+            <div class="post">
+                <h2 class="output_title">Hello, this is a test.</h2>
+                <p class="output_paragraph">This is a test post to demonstrate how posts will appear on this page. The actual posts created by users will have a delete button, allowing them to remove their posts if needed. This example does not include a delete button because it is a static demonstration.</p>
+            </div>
+            <% obj.forEach((item) => { %>
+                <div class="post">
+                    <h2 class="output_title"><%= item.title %></h2>
+                    <p class="output_paragraph"><%= item.post %></p>
+                    <form class="deleteForm" action="/delete" method="POST">
+                        <input type="hidden" name="id" value="<%= item.id %>">
+                        <input class="deleteBtn" type="submit" value="Delete">
+                    </form>
+                </div>
+            <% }); %>
+        </div>
+
+    </div>
+
+
+
+    <%- include('partials/footer')  %>
+
+
+
+
