@@ -89,3 +89,6 @@ function counterClick(btn) {
   let contNumber = Number(btnCurrent.textContent);
   btnCurrent.textContent = contNumber + 1;
 }
+
+let year = new Date().getFullYear();
+document.getElementById('year').innerHTML = `&copy ${year} Marius Bogdan. All rights reserved.`;
