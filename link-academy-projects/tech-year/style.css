@@ -1,0 +1,561 @@
+
+/* Add some margin to the page and set a default font and colour */
+
+body {
+    font-family: "Georgia", serif;
+    line-height: 1.8em;
+    color: #333;
+}
+
+/* Give headings their own font */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Main content area */
+
+#content {
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+    clear: both;
+    text-align: center;
+    margin: 70px;
+    padding: 10px;
+    background: #ebedf2;
+    border: 1px solid #333;
+    
+}
+
+.wideBox h1 {
+    font-weight: bold;
+    margin: 20px;
+    color: #666;
+    font-size: 1.5em;
+}
+
+/* Slots for final card positions */
+
+#cardSlots {
+    margin: 20px auto 0 auto;
+    background: #f3f3f3;
+}
+
+/* The initial pile of unsorted cards */
+
+#cardPile {
+    margin: 0 auto;
+    background: #f3f3f3;
+    
+}
+
+#cardSlots,
+#cardPile {
+    width: 880px;
+    height: 300px;
+    padding: 20px;
+    border: 2px solid #333;
+    
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+
+/* Individual cards and slots */
+
+#cardSlots div,
+#cardPile div {
+    float: left;
+    
+    width: 115px;
+    height: 40px;
+    padding: 7px 3px;
+    padding-bottom: 3px;
+    border: 2px solid #E9214F;
+    
+    margin:  10px;
+    background: #fff;
+}
+#cardPile div{
+    cursor: move;
+}
+
+
+#cardSlots div.hovered {
+    background: #aaa;
+}
+
+#cardSlots div {
+    border-style: dashed;
+}
+
+#cardPile div {
+    background: #E9214F;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 3px #000;
+}
+
+#cardPile div.ui-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* Individually coloured cards */
+
+#card1.correct, #card11.correct, #card21.correct {
+    background: red;
+}
+
+#card2.correct, #card12.correct, #card22.correct {
+    background: brown;
+}
+
+#card3.correct, #card13.correct, #card23.correct {
+    background: orange;
+}
+
+#card4.correct, #card14.correct, #card24.correct {
+    background: yellow;
+}
+
+#card5.correct, #card15.correct {
+    background: green;
+}
+
+#card6.correct, #card16.correct {
+    background: cyan;
+}
+
+#card7.correct, #card20.correct {
+    background: blue;
+}
+
+#card8.correct, #card19.correct {
+    background: indigo;
+}
+
+#card9.correct, #card18.correct {
+    background: purple;
+}
+
+#card10.correct, #card17.correct {
+    background: violet;
+}
+
+
+/* "You did it!" message */
+#successMessage {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background: rgb(203, 208, 203);
+    border: 2px solid #333;
+    
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+}
+button{
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+}
+#message {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background: #fff;
+    border: 2px solid #333;
+    
+    -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+    display: none;
+}
+
+
+
+.buttons-year {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+  
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128, 0.2);
+    width: 30em;
+    margin: 0 2em;
+    position: absolute;
+    margin-top: 2em;
+    
+}
+
+.buttons-container a {
+    text-decoration: none;
+}
+
+.year-container {
+    position: absolute;
+    text-align: center;
+    margin-top: 5.5em;
+    font-size: large;
+}
+
+    /* BUTTON 49 */
+.outline {
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    outline: none;
+    overflow: visible;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+  
+
+  
+  
+  
+.outline .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.outline .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.outline .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.outline:hover {
+    background: white;
+}
+
+.outline:hover::before {
+    width: 0.9375rem;
+    background: black;
+}
+
+.outline:hover .text {
+    color: black;
+    padding-left: 1.5em;
+}
+
+.outline:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.outline:hover .bottom-key-1,
+.outline:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+  
+  /* BUTTON 49 */
+  
+
+ 
+  
+  
+/* Return home button */
+
+.return-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 7em;
+    height: 3em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    margin-bottom: 0 !important;
+    background-color: #000000; 
+}
+    
+
+.return-sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.return-sign svg {
+    width: 1.4em; 
+}
+
+.return-sign svg path {
+    fill: white; 
+}
+
+.return-text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s; 
+}
+
+
+.return-button:hover {
+    width: 15em;
+    transition-duration: .3s; 
+}
+
+.return-button:hover .return-sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 1.5em; 
+}
+
+
+.return-button:hover .return-text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 0.2em; 
+}
+
+
+.return-button:active {
+    transform: translate(2px, 2px); 
+}
+
+/* Return home button */
+
+
+/* View code button */
+
+
+.code-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    height: 3em;
+    width: 7em;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 0 !important;
+    overflow: hidden; 
+}
+
+.bracket {
+    font-size: 1.3em;
+    transition: all 0.3s;
+    color: #ffffff;
+    
+}
+
+.left,
+.right {
+    margin-bottom: 0.2em;
+}
+
+.code-text {
+    font-size: 0.8em;
+    width: 0;
+    transform: scale(0);
+    transition: all .3s;
+    white-space: nowrap;
+    color: white; 
+    
+}
+
+.code-button:hover {
+    width: 15em; 
+}
+
+.code-button:hover .code-text {
+    transform: scale(1.4);
+    width: 13em; 
+}
+
+
+@media (max-width: 1024px) {
+* {
+    transition: none;
+    animation: none;
+}
+
+.buttons-container {
+    width: 27em;
+}
+
+.return-button {
+    width: 12em !important;
+    
+}
+
+.return-sign {
+    width: 30%;
+    padding-left: 1em;
+}
+
+.return-text {
+    opacity: 1;
+    width: 50%;
+    padding-right: 1em;
+    font-size: 1.4em;
+}
+
+
+.code-button {
+    width: 12em !important;
+}
+
+.code-text {
+    transform: scale(1.4);
+    width: 8em !important;
+    font-size: 0.8em; 
+}
+
+.bracket {
+    font-size: 1.5em;
+}
+}
+
+
+@media (max-width: 430px) {
+
+.buttons-container {
+    width: 25em;
+    
+    }
+
+
+.return-button {
+    width: 10em !important;
+    height: 3em;
+}
+
+.return-sign {
+    width: 40%;
+    padding-left: 0;
+    padding-right: 0.5em;
+}
+
+.return-text {
+    opacity: 1;
+    width: 70%;
+    padding-right: 0.5em;
+    font-size: 0.8em;
+}
+
+
+
+.code-button {
+    width: 10em !important;
+    height: 3em;
+}
+
+.code-text {
+    transform: scale(1.4);
+    width: 12em !important;
+    font-size: 0.6em; 
+}
+
+.bracket {
+    font-size: 1.5em;
+}
+
+#cardSlots {
+    width: auto;
+    height: 20em;
+    
+}
+
+#cardPile {
+    width: auto;
+    height: 17em;
+    
+}
+
+#cardSlots div,
+#cardPile div {
+    width: 57.5px;
+    height: 20px;
+}
+
+
+#cardPile div {
+    font-size: 9px;
+    margin: 5px;
+}
+
+
+
+
+
+.wideBox {
+    margin: 0;
+    padding: 0;
+}
+
+}
+
+
+
+
+
