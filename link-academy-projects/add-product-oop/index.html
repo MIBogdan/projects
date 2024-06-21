@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product App</title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="App.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div class="main-container d-flex  flex-column ">
+        <nav class="navbar navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Products App</a>
+        </nav>
+      
+      <div class="container mt-5">
+        <!-- APPLICATION -->
+        <div id="App" class="d-flex align-items-center">
+          <!-- FORM -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h4>Add A Product</h4>
+              </div>
+              <form id="product-form" class="card-body">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Product Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    id="price"
+                    step="0.01"
+                    placeholder="Product Price"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    id="year"
+                    min="1900"
+                    max="2099"
+                    step="1"
+                    
+                    class="form-control"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="Save"
+                  class="btn btn-primary btn-block"
+                />
+              </form>
+            </div>
+          </div>
+
+          <!-- PRODUCTS LIST -->
+          <div id="product-list"  class="col-md-8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons-year">   
+      <div class="buttons-container">
+              <div class="outline">
+                  <span class="top-key"></span>
+                  <a href="https://www.marius-bogdan.com/">
+                      <button class="return-button">
+                          <div class="return-sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                          <div class="return-text">Return</div>
+                      </button>
+                  </a>
+                  <a href="https://github.com/MIBogdan/projects/tree/main">
+                      <button class="code-button">
+                          <span class="bracket left">&#123;</span>
+                          <span class="code-text">View Code</span>
+                          <span class="bracket right">&#125;</span>
+                      </button>
+                  </a>
+                  <span class="bottom-key-1"></span>
+                  <span class="bottom-key-2"></span>
+              </div>
+          <div class="year-container">
+              <p id="yearCopyright"></p>
+          </div>
+      </div>
+  </div>
+    
+
+    <script src="App.js" type="module"></script>
+  </body>
+</html>

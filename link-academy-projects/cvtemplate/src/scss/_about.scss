@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+// .about-mf {
+//     .box-shadow-full {
+//       padding-top: 4rem;
+//       padding-bottom: 4rem;
+//     }
+//     .about-img {
+//       margin-bottom: 2rem;
+//       img {
+//         margin-left: 10px;
+//       }
+//     }
+//   }
+//   @media (min-width: 767px) {
+//     .about-mf {
+//       .box-pl2 {
+//         margin-top: 3rem;
+//         padding-left: 0rem;
+//       }
+//     }
+//   }
+//   .skill-mf {
+//     span {
+//       color: $color_1;
+//     }
+//     .progress {
+//       background-color: $background-color_4;
+//       margin: 0.5rem 0 1.2rem 0;
+//       border-radius: 0;
+//       height: 0.7rem;
+//       .progress-bar {
+//         height: 0.7rem;
+//         background-color: $background-color_2;
+//       }
+//     }
+//   }
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+.about-mf {
+  .box-shadow-full {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .about-img {
+    margin-bottom: 2rem;
+    img {
+      margin-left: 10px;
+    }
+  }
+}
+@media (min-width: 767px) {
+  .about-mf {
+    .box-pl2 {
+      margin-top: 3rem;
+      padding-left: 0rem;
+    }
+  }
+}
+.skill-mf {
+  span {
+    color: $color_1;
+  }
+  .progress {
+    background-color: $background-color_4;
+    margin: 0.5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: 0.7rem;
+    .progress-bar {
+      height: 0.7rem;
+      background-color: $background-color_2;
+    }
+  }
+}
+// skill-about
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.skills-bar-container {
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+
+  list-style: none;
+
+  li {
+    position: relative;
+    width: 100%;
+    padding: $li-padding;
+    margin-bottom: 10px;
+
+    .progressbar-title {
+      color: $progressbar-title-color;
+
+      h3 {
+        display: inline-block;
+      }
+      .percent {
+        position: absolute !important;
+        right: $li-padding;
+      }
+    } // end progressbar-title
+
+    .bar-container {
+      background: $color_1;
+      position: relative;
+      width: 100%;
+      height: 5px;
+      margin-top: 5px;
+      display: block;
+      @include border-radius(5px);
+
+      .progressbar {
+        position: absolute;
+        width: 160px;
+        height: 100%;
+        @include border-radius(5px);
+      }
+    } // end bar-container
+  }
+}
+
+.progressred {
+  background-color: $red;
+}
+.progressblue {
+  background-color: $blue;
+}
+.progresspurple {
+  background-color: $purple;
+}
+.progressorange {
+  background-color: $orange;
+}
+.progressangular {
+  background-color: $angularColor;
+}
+.progressreact {
+  background-color: $reactColor;
+}
+.progressvue {
+  background-color: $vueColor;
+}
+
+  

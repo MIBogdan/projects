@@ -1,0 +1,97 @@
+/*!   
+ * Template Name: Developer - Portfolio/CV/Resume
+ * Version: Bootstrap 5.3.3 +Webpack 5.90.3 
+ * Author: Adrian Adiaconitei for LinkAcademy
+*/
+
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
+
+/*
+|----------------------------------------------------------------------------
+	1. FONTS: Google Font
+|----------------------------------------------------------------------------
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Open+Sans:400,400i,600,600i,700,700i");
+
+//*************************** Theme Colours****************************/
+/*
+|----------------------------------------------------------------------------
+	2. Define theme colour scheme
+|----------------------------------------------------------------------------
+*/
+
+$font-family_1: "Roboto", Helvetica, Arial, sans-serif;
+$font-family_2: "Montserrat", sans-serif;
+
+$color_1: #4e4e4e;
+$color_2: #1a1a1a;
+$color_3: #ffffff;
+$color_4: #f5f5f5;
+$color_5: #ffffff;
+$color_6: #000000;
+
+$red: #c0392b;
+$blue: #075997;
+$purple: #9b59b6;
+$orange: #ffa500;
+$green: $color_5;
+$reactColor: rgb(20 158 202/0.7);
+$vueColor: #42b883;
+$angularColor: #f9174d;
+$animation-delay: 0.7s;
+
+$border-color_1: rgba(255, 255, 255, 0.3);
+$border-color_2: $vueColor;
+$border-top-color_1: #eee;
+
+$progressbar-title-color: #fff;
+
+$background-color_1: #ffffff;
+$background-color_2: $color_3;
+$background-color_3: $color_2;
+$background-color_4: #0062d3;
+$background-color_5: transparent;
+$background-color_6: #0062d3;
+$background-color_7: #0062d3;
+$background-color_8: #0062d3;
+
+$li-padding: 5px;
+$btn-color: $vueColor;
+$btn-color-2: $reactColor;
+$text-color: #434343;
+$text-color-secondary: #666;
+$grey: #999;
+$divider: #e8e8e8;
+$lighter-grey: #ccc;
+$darker-grey: #666;
+$smoky-white: #f5f5f5;
+$background: #dae3e7;
+$heart: #fb866a;
+
+$dm-background: #17191c;
+$dm-text-color: rgba(256, 256, 256, 0.9);
+$dm-text-color-secondary: rgba(256, 256, 256, 0.7);
+
+//*************************** Theme Styles ****************************/
+// Import theme styles
+
+@import "general";
+@import "base";
+@import "header";
+@import "banner";
+@import "social";
+@import "about";
+@import "experience";
+@import "contact";
+@import "footer";
+@import "../../node_modules/glightbox/dist/css/glightbox.min.css";
+@import "portfolio";
+@import "githubapi";
+
+
+// @import "dark-mode";
+
+// @import "tot";
