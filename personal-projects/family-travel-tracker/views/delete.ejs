@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete User</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/new.css">
+  <style>
+    #deleteForm {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    input[type="radio"] {
+        display: inline-block;
+        font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid currentColor;
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    label {
+        width: auto;
+        height: auto;
+        padding: 1em;
+    }
+    .labelContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Delete a Family Member</h1>
+  <form action="/delete" method="post" id="deleteForm">
+    <div class="labelContainer">
+        <% users.forEach(function(user) { %>
+            <label for="<%= user.id %>" style="background-color: <%= user.color %>;">
+                <%= user.name %>
+            </label>
+            <input type="radio" name="userId" value="<%= user.id %>" id="<%= user.id %>">
+        <% }); %>
+    </div>
+        
+        
+    <button type="submit">Delete</button>
+  </form>
+</body>
+
+</html>
